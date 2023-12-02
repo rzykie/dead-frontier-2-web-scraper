@@ -13,4 +13,11 @@ response = httpx.get(
     headers=headers,
 )
 
-print(response.text)
+# response.text is the HTMl
+html = HTMLParser(response.text)
+
+skills = html.css("table.customtable td span")
+
+for skill in skills:
+    skill_progression = {"Skill": skill.text()}
+    print(skill_progression)
