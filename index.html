@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Pistol Loot</title>
+    <style>
+        /* Add your CSS styles here */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(38, 42, 153);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: darkgrey;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="openModal()" id="openLootBtn">Open Loot Modal</button>
+
+    <div id="lootModal" class="modal">
+        <div class="modal-content">
+            <p id="lootedPistol"></p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Add your JavaScript code here
+        const pistolList = [
+            {
+                "id": 1,
+                "name": "Lost Spartan",
+                "percentage": 1
+            },
+            {
+                "id": 4,
+                "name": "Sandy's Custom CZ-83",
+                "percentage": 1
+            },
+            {
+                "id": 7,
+                "name": "Antique Pistol",
+                "percentage": 1
+            },
+            {
+                "id": 10,
+                "name": "Dogg's Magnum",
+                "percentage": .05
+            },
+            {
+                "id": 13,
+                "name": "Dead Eye",
+                "percentage": .05
+            },
+            {
+                "id": 16,
+                "name": "Nastya's Pocket Pistol",
+                "percentage": .05
+            },
+            {
+                "id": 19,
+                "name": "Bank's Six Shooter",
+                "percentage": .05
+            },
+            {
+                "id": 22,
+                "name": "Ol' Petes Reliable",
+                "percentage": .05
+            },
+            {
+                "id": 25,
+                "name": "Street Avenger",
+                "percentage": .05
+            },
+            {
+                "id": 28,
+                "name": "Silent Soul",
+                "percentage": .05
+            },
+            {
+                "id": 31,
+                "name": "The Challenger",
+                "percentage": .05
+            },
+            {
+                "id": 34,
+                "name": "Bloodied Handgun",
+                "percentage": .05
+            },
+            {
+                "id": 37,
+                "name": "Big Snake",
+                "percentage": 10
+            },
+            {
+                "id": 40,
+                "name": "Comer's Vengeance",
+                "percentage": 10
+            },
+            {
+                "id": 43,
+                "name": "Fatman's Sidearm",
+                "percentage": 10
+            },
+            {
+                "id": 46,
+                "name": "Lead Slinger",
+                "percentage": 10
+            },
+            {
+                "id": 49,
+                "name": "Lerov's Service Pistol",
+                "percentage": 10
+            },
+            {
+                "id": 52,
+                "name": "Mara's Sidearm",
+                "percentage": 10
+            },
+            {
+                "id": 55,
+                "name": "Old Ways",
+                "percentage": 10
+            },
+            {
+                "id": 58,
+                "name": "Pale Rider",
+                "percentage": 10
+            },
+            {
+                "id": 61,
+                "name": "Proud One",
+                "percentage": 10
+            },
+            {
+                "id": 64,
+                "name": "Ronin's Blade",
+                "percentage": 10
+            },
+            {
+                "id": 67,
+                "name": "Russian Roulette",
+                "percentage": 10
+            },
+            {
+                "id": 70,
+                "name": "Two-headed Devourer",
+                "percentage": 10
+            },
+            {
+                "id": 73,
+                "name": "Quetzalcoatl",
+                "percentage": 10
+            }
+        ];
+
+        function openModal() {
+            const lootedPistol = getRandomPistol();
+            document.getElementById('lootedPistol').textContent = `You looted: ${lootedPistol.name}`;
+            document.getElementById('lootModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('lootModal').style.display = 'none';
+        }
+
+        function getRandomPistol() {
+            const randomNum = Math.random() * 100;
+            let cumulativePercentage = 0;
+
+            for (const pistol of pistolList) {
+                cumulativePercentage += pistolPercentage(pistol.id);
+
+                if (randomNum <= cumulativePercentage) {
+                    return pistol;
+                }
+            }
+
+            // Default to the last pistol if no match is found (optional)
+            return pistolList[pistolList.length - 1];
+        }
+
+        function pistolPercentage(pistolId) {
+            // Find the pistol with the given ID
+            const pistol = pistolList.find(p => p.id === pistolId);
+
+            // If the pistol is found, return its percentage; otherwise, default to 0%
+            return pistol ? pistol.percentage : 0;
+        }
+    </script>
+
+</body>
+
+</html>

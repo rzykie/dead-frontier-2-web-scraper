@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "name": "Lost Spartan",
+    "percentage": 10
+  },
+  {
+    "id": 4,
+    "name": "Sandy's Custom CZ-83",
+    "percentage": 10
+  },
+  {
+    "id": 7,
+    "name": "Antique Pistol",
+    "percentage": 10
+  },
+  {
+    "id": 10,
+    "name": "Dogg's Magnum",
+    "percentage": 10
+  },
+  {
+    "id": 13,
+    "name": "Dead Eye",
+    "percentage": 10
+  },
+  {
+    "id": 16,
+    "name": "Nastya's Pocket Pistol",
+    "percentage": 10
+  },
+  {
+    "id": 19,
+    "name": "Bank's Six Shooter",
+    "percentage": 10
+  },
+  {
+    "id": 22,
+    "name": "Ol' Petes Reliable",
+    "percentage": 10
+  },
+  {
+    "id": 25,
+    "name": "Street Avenger",
+    "percentage": 10
+  },
+  {
+    "id": 28,
+    "name": "Silent Soul",
+    "percentage": 10
+  },
+  {
+    "id": 31,
+    "name": "The Challenger",
+    "percentage": 10
+  },
+  {
+    "id": 34,
+    "name": "Bloodied Handgun",
+    "percentage": 10
+  },
+  {
+    "id": 37,
+    "name": "Big Snake",
+    "percentage": 10
+  },
+  {
+    "id": 40,
+    "name": "Comer's Vengeance",
+    "percentage": 10
+  },
+  {
+    "id": 43,
+    "name": "Fatman's Sidearm",
+    "percentage": 10
+  },
+  {
+    "id": 46,
+    "name": "Lead Slinger",
+    "percentage": 10
+  },
+  {
+    "id": 49,
+    "name": "Lerov's Service Pistol",
+    "percentage": 10
+  },
+  {
+    "id": 52,
+    "name": "Mara's Sidearm",
+    "percentage": 10
+  },
+  {
+    "id": 55,
+    "name": "Old Ways",
+    "percentage": 10
+  },
+  {
+    "id": 58,
+    "name": "Pale Rider",
+    "percentage": 10
+  },
+  {
+    "id": 61,
+    "name": "Proud One",
+    "percentage": 10
+  },
+  {
+    "id": 64,
+    "name": "Ravenous Gunslinger",
+    "percentage": 10
+  },
+  {
+    "id": 67,
+    "name": "Russian Roulette",
+    "percentage": 10
+  },
+  {
+    "id": 70,
+    "name": "Two-headed Devourer",
+    "percentage": 10
+  },
+  {
+    "id": 73,
+    "name": "Quetzalcoatl",
+    "percentage": 10
+  },
+  {
+    "id": 76,
+    "name": "Ronin's Blade",
+    "percentage": 10
+  }
+]
